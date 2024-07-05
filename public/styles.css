@@ -1,0 +1,119 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.landing-page {
+    text-align: center;
+}
+
+.landing-page h1 {
+    font-size: 3rem;
+    color: #333;
+}
+
+.button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+
+#calendar {
+    width: 95%;
+    max-width: 1200px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    overflow: hidden;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px;
+}
+
+.header button {
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.header button:hover {
+    background-color: #003f7f;
+}
+
+.view-toggle {
+    display: flex;
+}
+
+.view-toggle button {
+    margin-left: 5px;
+    background-color: #0056b3;
+}
+
+.weekdays, .days {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.weekdays div, .days div {
+    width: 14.28%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    box-sizing: border-box;
+}
+
+.weekdays {
+    background-color: #f0f0f0;
+    font-weight: bold;
+}
+
+.days div {
+    border-bottom: 1px solid #eee;
+    border-right: 1px solid #eee;
+    cursor: pointer;
+    position: relative;
+}
+
+.days div:nth-child(7n) {
+    border-right: none;
+}
+
+.days div:hover {
+    background-color: #f0f0f0;
+}
+
+.event {
+    background-color: #007bff;
+    color: white;
+    padding: 2px 5px;
+    border-radius: 3px;
+    margin-top: 5px;
+    font-size: 0.9rem;
+}
