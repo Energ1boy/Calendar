@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function() {
     ];
 
     function fetchEvents() {
-        return fetch('http://localhost:3000/events')
+        return fetch('https://th-calendar.vercel.app/events')
             .then(response => response.json())
             .catch(() => []);
     }
@@ -138,7 +138,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function saveEvent(event) {
-        return fetch('http://localhost:3000/save-event', {
+        return fetch('https://th-calendar.vercel.app/save-event', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -148,7 +148,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function deleteEvent(event) {
-        return fetch('http://localhost:3000/delete-event', {
+        return fetch('https://th-calendar.vercel.app/delete-event', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
