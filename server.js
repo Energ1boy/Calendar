@@ -2,11 +2,19 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const fs = require('fs');
 const path = require('path');
+const cors = require('cors'); // Import CORS middleware
 const app = express();
 
 // Middleware
 app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, 'public')));
+
+// Use CORS middleware with options
+app.use(cors({
+    origin: 'https://th-calendar.vercel.app', // Replace with your Vercel deployment URL
+    methods: ['GET', 'POST'],
+    allowedHeaders: ['Content-Type'],
+}));
 
 // Serve the index.html file at the root route
 app.get('/', (req, res) => {
